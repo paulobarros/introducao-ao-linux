@@ -1,0 +1,21 @@
+// Google Fonts
+
+@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,300i,400,400i,500,500i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=JetBrains+Mono:300,300i,400,400i,500,500i,700,700i);
+
+
+// Font Variables
+
+$barlow-semi: 'Barlow Semi Condensed', sans-serif;
+$jetbrains-mono: 'JetBrains Mono', mono;
+
+/*-- scss:defaults --*/
+$headings-font-weight:  500 !default;
+$font-family-sans-serif: $barlow-semi;
+$font-family-monospace: $jetbrains-mono;
+$code-color: rgba(#2F2D2D,1);
+$code-bg: rgba(#ECEFF1,1);
+
+
+
+/*-- scss:rules --*/

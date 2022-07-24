@@ -1,0 +1,23 @@
+---
+title: "GNU/Linux"
+---
+
+Linux é um sistema operacional de código aberto (*open source*), inicialmente desenvolvido para arquitetura Intel x86, e expandido para as mais diversas arquiteturas, estando presente hoje desde computadores pessoais, a sistemas embarcados e supercomputadores.
+
+## Como surgiu o Linux? {#historico}
+
+![Fonte: <https://tinyurl.com/bdfb4mce>](images/linus.png){style="float: left; padding: 0 20px 0 0;" fig-align="left" width="400"}
+
+Linus Torvalds era um estudante em Helsinki, Finlândia, em 1991 quando decidiu criar seu próprio sistema operacional. Junto com o **kernel** do sistema, ele também desenvolveu todo um ambiente essencial para o que viria depois a ser o Linux.
+
+Em 1992, o Linux foi novamente licenciado usando a GPL (_General Public License_) da GNU (um projeto que promovia a criação de softwares livres), o que proporcionou então o surgimento da comunidade de desenvolvedores do sistema. 
+
+Combinando o kernel Linux com outros ingredientes do projeto GNU, usuários puderam então desenvolver sistemas completos baseados em Linux, as famosas distribuições, que ajudaram bastante a aumentar o interesse da comunidade de desenvolvedores pelo sistema, e a gradual adoção do Linux nos computadores pessoais.
+
+## O kernel Linux
+
+O kernel Linux é desenvolvido colaborativamente por uma comunidade global de desenvolvedores, sob a supervisão geral de Linus Torvalds. Segue completamente o desejo dos usuários, sem restrições de língua, geográficas ou pressões de mercado.
+
+Ao longo da sua história mais de **8 mil programadores** contribuíram para a evolução do kernel Linux, somando mais de **15 milhões de linhas de código**. Em comparação, Ilíadas de Homero tem aproximadamente 15 mil linhas de texto.
+
+Um novo kernel é lançado em média a cada 3 meses, utilizando **patches** sugeridos por diversos desenvolvedores. Cada sugestão de patch é avaliada e testada minunciosamente antes de fazer parte definitivamente do kernel Linux.

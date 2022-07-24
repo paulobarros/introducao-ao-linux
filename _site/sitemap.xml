@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://paulobarros.github.io/introducao-ao-linux/index.html</loc>
+    <lastmod>2022-07-24T15:17:55.449Z</lastmod>
+  </url>
+  <url>
+    <loc>https://paulobarros.github.io/introducao-ao-linux/wsl.html</loc>
+    <lastmod>2022-07-24T15:17:56.641Z</lastmod>
+  </url>
+  <url>
+    <loc>https://paulobarros.github.io/introducao-ao-linux/linux.html</loc>
+    <lastmod>2022-07-24T15:17:56.997Z</lastmod>
+  </url>
+  <url>
+    <loc>https://paulobarros.github.io/introducao-ao-linux/operacoes/index.html</loc>
+    <lastmod>2022-07-24T15:17:57.369Z</lastmod>
+  </url>
+  <url>
+    <loc>https://paulobarros.github.io/introducao-ao-linux/about.html</loc>
+    <lastmod>2022-07-24T15:17:58.437Z</lastmod>
+  </url>
+  <url>
+    <loc>https://paulobarros.github.io/introducao-ao-linux/lfs/index.html</loc>
+    <lastmod>2022-07-24T15:17:58.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://paulobarros.github.io/introducao-ao-linux/lfs/terminal.html</loc>
+    <lastmod>2022-07-24T15:18:00.249Z</lastmod>
+  </url>
+</urlset>

@@ -1,11 +1,17 @@
 ---
-title: "introducao-ao-linux"
+title: "Introdução ao GNU/Linux"
+subtitle: "Sistema de arquivos e Operações básicas em linha de comando" 
+lang: pt-BR
 ---
 
-This is a Quarto website.
+## Apresentação {#apresentacao}
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Este é um curso introdutório ao sistema operacional GNU/Linux ministrado para o Grupo de Pesquisas em Conservação (GACOM) na Universidade Estadual do Sudoeste da Bahia (UESB), campus Jequié. O objetivo deste curso é oferecer aos alun\@s um primeiro contato com o sistema operacional, apresentando suas principais características, sistema de arquivos e diretórios e operações comuns em um terminal de comando.
 
-```{r}
-1 + 1
-```
+## Windows Subsystem for Linux (WSL)
+
+O WSL é uma ferramenta da Microsoft que permite a instalação de uma distribuição Linux sem a necessidade de *dual-boot*. Desta maneira o usuário tem acesso a ferramentas do Linux como Bash, integradas ao ambiente de ferramentas do Windows utilizando o PowerShell. A documentação oficial do WSL encontra-se [neste link](https://docs.microsoft.com/en-us/windows/wsl/install) e também no menu ao lado em um tutorial passo-a-passo.
+
+## Quem ministra?
+
+Me chamo Paulo Barros, sou Bacharel em Ciências Biológicas com ênfase em genética pela UESB, e atualmente aluno de Mestrado nos programas de Pós-Graduação em Estatística Aplicada e Biometria pela Universidade Federal de Viçosa (UFV) e em Genética, Biodiversidade e Conservação pela UESB. Tenho atuado como Cientista de Dados na área da Biologia desde o final da graduação colaborando em trabalhos das mais diversas áreas. Também tenho experiência oferecendo cursos e mentorias em Análise de Dados com a Linguagem R para estudantes de graduação e pós-graduação, bem como para professores e profissionais de áreas correlatas da Biologia.

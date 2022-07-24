@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introdução ao GNU/Linux",
+    "section": "",
+    "text": "Este é um curso introdutório ao sistema operacional GNU/Linux ministrado para o Grupo de Pesquisas em Conservação (GACOM) na Universidade Estadual do Sudoeste da Bahia (UESB), campus Jequié. O objetivo deste curso é oferecer aos alun@s um primeiro contato com o sistema operacional, apresentando suas principais características, sistema de arquivos e diretórios e operações comuns em um terminal de comando."
+  },
+  {
+    "objectID": "index.html#windows-subsystem-for-linux-wsl",
+    "href": "index.html#windows-subsystem-for-linux-wsl",
+    "title": "Introdução ao GNU/Linux",
+    "section": "Windows Subsystem for Linux (WSL)",
+    "text": "Windows Subsystem for Linux (WSL)\nO WSL é uma ferramenta da Microsoft que permite a instalação de uma distribuição Linux sem a necessidade de dual-boot. Desta maneira o usuário tem acesso a ferramentas do Linux como Bash, integradas ao ambiente de ferramentas do Windows utilizando o PowerShell. A documentação oficial do WSL encontra-se neste link e também no menu ao lado em um tutorial passo-a-passo."
+  },
+  {
+    "objectID": "index.html#quem-ministra",
+    "href": "index.html#quem-ministra",
+    "title": "Introdução ao GNU/Linux",
+    "section": "Quem ministra?",
+    "text": "Quem ministra?\nMe chamo Paulo Barros, sou Bacharel em Ciências Biológicas com ênfase em genética pela UESB, e atualmente aluno de Mestrado nos programas de Pós-Graduação em Estatística Aplicada e Biometria pela Universidade Federal de Viçosa (UFV) e em Genética, Biodiversidade e Conservação pela UESB. Tenho atuado como Cientista de Dados na área da Biologia desde o final da graduação colaborando em trabalhos das mais diversas áreas. Também tenho experiência oferecendo cursos e mentorias em Análise de Dados com a Linguagem R para estudantes de graduação e pós-graduação, bem como para professores e profissionais de áreas correlatas da Biologia."
+  },
+  {
+    "objectID": "wsl.html",
+    "href": "wsl.html",
+    "title": "Instalando o Windows Subsystem for Linux (WSL)",
+    "section": "",
+    "text": "O WSL é uma ferramenta da Microsoft que permite a instalação de uma distribuição Linux sem a necessidade de dual-boot. Desta maneira o usuário tem acesso a ferramentas do Linux como Bash, integradas ao ambiente de ferramentas do Windows utilizando o PowerShell. A documentação oficial do WSL encontra-se neste link."
+  },
+  {
+    "objectID": "wsl.html#precheck",
+    "href": "wsl.html#precheck",
+    "title": "Instalando o Windows Subsystem for Linux (WSL)",
+    "section": "Pré-requisitos",
+    "text": "Pré-requisitos\n\n\n\n\n\n\nImportante\n\n\n\nPara utilizar a instalação do WSL via terminal de comando você precisa ter o Windows 10 versão 2004 ou superior (Build 19041 ou superior) ou Windows 11.\nPara checar qual a sua versão do Windows e número da build, pressione Windows + R, digite winver e pressione OK.\nSe possui uma versão mais antiga do Windows e quiser instalar o WSL, aqui tem um tutorial passo-a-passo para versões mais antigas."
+  },
+  {
+    "objectID": "wsl.html#instalação",
+    "href": "wsl.html#instalação",
+    "title": "Instalando o Windows Subsystem for Linux (WSL)",
+    "section": "Instalação",
+    "text": "Instalação\nPara instalar o WSL basta abrir o PowerShell ou o terminal de comando padrão do Windows em modo administrador e rodar o comando:\n\nwsl --install\n\nEsse comando faz o download dos requerimentos necessários e do kernel do Linux, configura o WSL 2 como padrão e instala uma distribuição Linux para você, que por padrão é a Ubuntu. A primeira vez que você iniciar sua instalação Linux, o terminal irar abrir e você deverá aguardar alguns minutos para que os arquivos sejam preaprados, as próximas inicializações serão mais rápidas.\n\nConfigurando informações do seu usuário\nUma vez instalado o WSL, você precisará criar uma conta de usuário e senha para distribuição instalada. Evite nomes de usuário extensos e com caracteres especiais, acentuação ou espaços. A senha também deve ser algo fácil de lembrar pois será constantemente requisitada na hora de rodar comandos no terminal."
+  },
+  {
+    "objectID": "linux.html",
+    "href": "linux.html",
+    "title": "GNU/Linux",
+    "section": "",
+    "text": "Linux é um sistema operacional de código aberto (open source), inicialmente desenvolvido para arquitetura Intel x86, e expandido para as mais diversas arquiteturas, estando presente hoje desde computadores pessoais, a sistemas embarcados e supercomputadores."
+  },
+  {
+    "objectID": "linux.html#historico",
+    "href": "linux.html#historico",
+    "title": "GNU/Linux",
+    "section": "Como surgiu o Linux?",
+    "text": "Como surgiu o Linux?\n\n\n\nFonte: https://tinyurl.com/bdfb4mce\n\n\nLinus Torvalds era um estudante em Helsinki, Finlândia, em 1991 quando decidiu criar seu próprio sistema operacional. Junto com o kernel do sistema, ele também desenvolveu todo um ambiente essencial para o que viria depois a ser o Linux.\nEm 1992, o Linux foi novamente licenciado usando a GPL (General Public License) da GNU (um projeto que promovia a criação de softwares livres), o que proporcionou então o surgimento da comunidade de desenvolvedores do sistema.\nCombinando o kernel Linux com outros ingredientes do projeto GNU, usuários puderam então desenvolver sistemas completos baseados em Linux, as famosas distribuições, que ajudaram bastante a aumentar o interesse da comunidade de desenvolvedores pelo sistema, e a gradual adoção do Linux nos computadores pessoais."
+  },
+  {
+    "objectID": "linux.html#o-kernel-linux",
+    "href": "linux.html#o-kernel-linux",
+    "title": "GNU/Linux",
+    "section": "O kernel Linux",
+    "text": "O kernel Linux\nO kernel Linux é desenvolvido colaborativamente por uma comunidade global de desenvolvedores, sob a supervisão geral de Linus Torvalds. Segue completamente o desejo dos usuários, sem restrições de língua, geográficas ou pressões de mercado.\nAo longo da sua história mais de 8 mil programadores contribuíram para a evolução do kernel Linux, somando mais de 15 milhões de linhas de código. Em comparação, Ilíadas de Homero tem aproximadamente 15 mil linhas de texto.\nUm novo kernel é lançado em média a cada 3 meses, utilizando patches sugeridos por diversos desenvolvedores. Cada sugestão de patch é avaliada e testada minunciosamente antes de fazer parte definitivamente do kernel Linux."
+  },
+  {
+    "objectID": "operacoes/index.html",
+    "href": "operacoes/index.html",
+    "title": "Linux File System",
+    "section": "",
+    "text": "Antes de mais nada, é interessante que você esteja familiarizad@ com a terminologia de um sistema Linux. Estes são alguns termos comuns que com certeza aparecerão ao longo do nosso curso.\n\n\n\n\n\n\n\nTermo\nSignificado\n\n\n\n\nKernel\né a interface entre aplicação e hardware.\n\n\nDistribuição\né uma coleção de programas combinados com o kernel Linux. Debian, Ubuntu, Red Hat, Suse são exemplos de distribuições Linux.\n\n\nBoot loader\né o programa que inicializa o sistema operacional (todo OS necessita de um boot loader)\n\n\nService\né um programa que roda como um background process\n\n\nFile System\né uma metodologia de armazenamento e organização de arquivos (ext3, ext4, FAT, XFS, NTFS)\n\n\nX Window System\nproporciona o framework necessário para desenvolvimento interfaces gráficas (GUI) em praticamente todos os sistemas Linux\n\n\nDesktop Environment\né a GUI que roda sobre o sistema operacional (Gnome, KDE)\n\n\nCommand line / Terminal\né a interface para digitação de comandos para o sistema operacional\n\n\nShell\né o interpretador da command line que traduz os comandos em linguagem de máquina para execução (bash, zsh)"
+  },
+  {
+    "objectID": "operacoes/index.html#fhs",
+    "href": "operacoes/index.html#fhs",
+    "title": "Linux File System",
+    "section": "Filesystem Hierarchy Standard",
+    "text": "Filesystem Hierarchy Standard\nTodo sistema de arquivos consiste em uma metodologia de organização de conjunto de dados de uma forma que este seja transparente e compreensível para o usuário. O sistema de arquivo é armazenado em um container chamado partição, podendo ocupar uma única ou várias partições através de links simbólicos.\nO Filesystem Hierarchy Standard é um padrão de armazenamento de dados gerenciado pela Linux Foundation. O objetivo deste padrão é determinar regras de implementação do sistema de arquivos de maneira que independente da distribuição, o mesmo padrão seja mantido, facilitando assim a interoperabilidade e migrações entre distribuições.\nDiferente do Windows, o Linux utiliza a ‘/’ como separador de paths (caminhos) e não possui letras para drives, sendo as partições montadas como diretórios no sistema de arquivo. Na tabela abaixo podemos observar algumas diferenças entre os dois sistemas operacionais.\n\n\n\n\nWindows\nLinux\n\n\n\n\nPartição\nDisco1\n/dev/sda1\n\n\nTipo de Sistema\nNTFS/VFAT\nEXT3/EXT4/XFS/BTRFS…\n\n\nParâmetros de Montagem\nLetra de Drive\nPonto de Montagem\n\n\nDiretório Raiz\nC:\\\n/"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "lfs/index.html",
+    "href": "lfs/index.html",
+    "title": "Linux File System",
+    "section": "",
+    "text": "Antes de mais nada, é interessante que você esteja familiarizad@ com a terminologia de um sistema Linux. Estes são alguns termos comuns que com certeza aparecerão ao longo do nosso curso.\n\n\n\n\n\n\n\nTermo\nSignificado\n\n\n\n\nKernel\né a interface entre aplicação e hardware.\n\n\nDistribuição\né uma coleção de programas combinados com o kernel Linux. Debian, Ubuntu, Red Hat, Suse são exemplos de distribuições Linux.\n\n\nBoot loader\né o programa que inicializa o sistema operacional (todo OS necessita de um boot loader)\n\n\nService\né um programa que roda como um background process\n\n\nFile System\né uma metodologia de armazenamento e organização de arquivos (ext3, ext4, FAT, XFS, NTFS)\n\n\nX Window System\nproporciona o framework necessário para desenvolvimento interfaces gráficas (GUI) em praticamente todos os sistemas Linux\n\n\nDesktop Environment\né a GUI que roda sobre o sistema operacional (Gnome, KDE)\n\n\nCommand line / Terminal\né a interface para digitação de comandos para o sistema operacional\n\n\nShell\né o interpretador da command line que traduz os comandos em linguagem de máquina para execução (bash, zsh)"
+  },
+  {
+    "objectID": "lfs/index.html#fhs",
+    "href": "lfs/index.html#fhs",
+    "title": "Linux File System",
+    "section": "Filesystem Hierarchy Standard",
+    "text": "Filesystem Hierarchy Standard\nTodo sistema de arquivos consiste em uma metodologia de organização de conjunto de dados de uma forma que este seja transparente e compreensível para o usuário. O sistema de arquivo é armazenado em um container chamado partição, podendo ocupar uma única ou várias partições através de links simbólicos.\nO Filesystem Hierarchy Standard é um padrão de armazenamento de dados gerenciado pela Linux Foundation. O objetivo deste padrão é determinar regras de implementação do sistema de arquivos de maneira que independente da distribuição, o mesmo padrão seja mantido, facilitando assim a interoperabilidade e migrações entre distribuições.\nDiferente do Windows, o Linux utiliza a ‘/’ como separador de paths (caminhos) e não possui letras para drives, sendo as partições montadas como diretórios no sistema de arquivo. Na tabela abaixo podemos observar algumas diferenças entre os dois sistemas operacionais.\n\n\n\n\nWindows\nLinux\n\n\n\n\nPartição\nDisco1\n/dev/sda1\n\n\nTipo de Sistema\nNTFS/VFAT\nEXT3/EXT4/XFS/BTRFS…\n\n\nParâmetros de Montagem\nLetra de Drive\nPonto de Montagem\n\n\nDiretório Raiz\nC:\\\n/"
+  },
+  {
+    "objectID": "lfs/index.html#diretorios",
+    "href": "lfs/index.html#diretorios",
+    "title": "Linux File System",
+    "section": "Estrutura de diretórios",
+    "text": "Estrutura de diretórios\nA imagem abaixo ilustra alguns dos principais diretórios em um sistema de arquivos Linux.\n\n\n\nAnatomia de um sistema de Arquivos Linux 1\n\n\nO LFS é case sensitive, ou seja, diferencia letras maíusculas de minúsculas, sendo assim /boot, /Boot e /BOOT representam três diretórios diferentes, o mesmo sendo aplicado para nomes de arquivos."
+  },
+  {
+    "objectID": "lfs/terminal.html",
+    "href": "lfs/terminal.html",
+    "title": " Terminal",
+    "section": "",
+    "text": "Embora o Linux tenha ganhado seu espaço no mercado dos computadores pessoais nas últimas décadas graças a distribuições cada vez mais simples e bem desenvolvidas, o seu uso em servidores é aonde o sistema mostra de fato sua robustez e confiabilidade.\nCom o barateamento dos custos de produção, ainda que servidores hoje sejam muito mais potentes custando bem menos que há algumas décadas, encontrar uma interface gráfica (GUI) rodando em um sistema Linux em um servidor não é tão comum. O motivo é que servidores são projetados para tarefas que exigem grande custo computacional, sendo assim, toda economia de recursos é importante, e uma interface gráfica apenas consumiria recursos de memória e espaço em disco que poderiam ser alocados para outros processos.\nPor esse motivo, conhecer os comandos básicos do terminal do Linux é essencial na hora de utilizar o sistema sem uma interface gráfica. Navegar em diretórios, criar e editar arquivos, utilizar linguagens de script para otimizar e automatizar rotinas repetitivas são algumas das habilidades necessárias para qualquer Cientista de Dados hoje em dia.\nToda entrada em um terminal possui três elementos básicos:\nComando: nome do programa a ser executado\nOpções: geralmente iniciam com um ou dois traços (dashes) pra diferenciar dos argumentos\nArgumentos: objeto no qual o comando vai realizar operações e retornar um resultado"
+  },
+  {
+    "objectID": "lfs/terminal.html#rtfm",
+    "href": "lfs/terminal.html#rtfm",
+    "title": " Terminal",
+    "section": "Read the Freaking Manual!",
+    "text": "Read the Freaking Manual!\nUma das características mais impressionantes da comunidade de desenvolvimento open source talvez seja a enorme preocupação com a documentação. Um hábito que precisa ser exercitado é recorrer a documentação de pacotes, funções e programas, evitando assim desgaste desnecessário e se familiarizando com boas práticas de programação.\n\n\n\n\n\nO Linux possui uma vasta documentação das suas funções, as famosas man pages de manual pages. Basta digitar no terminal man seguido do nome da função para a qual deseja a documentação.\n\nman head\n\n\n\n\nMan Page da função head"
+  },
+  {
+    "objectID": "lfs/terminal.html#utils",
+    "href": "lfs/terminal.html#utils",
+    "title": " Terminal",
+    "section": "Algumas funções úteis",
+    "text": "Algumas funções úteis\nhead exibe o início de um arquivo, as 10 primeiras linhas por padrão.\ntail exibe o final de um arquivo, as 10 últimas linhas por padrão.\nÉ possível utilizar o resultado de um comando como entrada para um outro, isso é feito através do operador pipe |. Quem já tem familiaridade com o tidyverse do R conhece a filosofia, o resultado de um comando/função é conectado a outra função.\n\n# exibindo o final da man page da função head\nman head | tail\n\n\n\n\nFinal da Man Page da função head"
+  },
+  {
+    "objectID": "lfs/terminal.html#sudo",
+    "href": "lfs/terminal.html#sudo",
+    "title": " Terminal",
+    "section": "sudo",
+    "text": "sudo\nAlguns comandos necessitam ser executados ao nível de superusuário do sistema (root). O comando sudo quando utilizado antes de algum comando/função informa ao sistema que esta deve ser executada com privilégios de administrador. Nesse momento a senha de usuário é requisitada, basta informar a senha e pressionar Enter e o comando é executado.\nPor padrão, uma sessão sudo dura 15 minutos. Isso significa que após ter executado um comando como sudo informando sua senha, qualquer outro comando executado com sudodentro dos próximos 15 minutos não irá requisitar que o usuário informe a senha novamente.\nUma outra maneira de executar comandos como admin é utilizar o comando sudo su. O comando su (substitute user) é utilizado para alternar entre usuários de um sistema. Utilizado em conjunto com sudo o usuário é trocado para o root, o superusuário do sistema e continuará assim até ser alterado novamente, seja utilizando su ou simplesmente digitando exit no terminal, retornando assim ao usuário padrão do sistema.\n\n\n\n\n\n\nCuidado!\n\n\n\nÉ preciso cautela na hora de alterar o usuário que executará um comando. Embora seja comum utilizarmos o sudo para executar tarefas rotineiras, utilizar o terminal no modo superusuário com sudo su pode causar danos ao sistema de arquivos ao rodar comandos indesejados."
+  }
+]

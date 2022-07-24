@@ -1,0 +1,47 @@
+---
+title: Linux File System
+lang: pt-BR
+---
+
+## Terminologia
+
+Antes de mais nada, é interessante que você esteja familiarizad\@ com a terminologia de um sistema Linux. Estes são alguns termos comuns que com certeza aparecerão ao longo do nosso curso.
+
+| Termo                       | Significado                                                                                                                  |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| **Kernel**                  | é a interface entre aplicação e hardware.                                                                                    |
+| **Distribuição**            | é uma coleção de programas combinados com o kernel Linux. Debian, Ubuntu, Red Hat, Suse são exemplos de distribuições Linux. |
+| **Boot loader**             | é o programa que inicializa o sistema operacional (todo OS necessita de um boot loader)                                      |
+| **Service**                 | é um programa que roda como um background process                                                                            |
+| **File System**             | é uma metodologia de armazenamento e organização de arquivos (ext3, ext4, FAT, XFS, NTFS)                                    |
+| **X Window System**         | proporciona o framework necessário para desenvolvimento interfaces gráficas (GUI) em praticamente todos os sistemas Linux    |
+| **Desktop Environment**     | é a GUI que roda sobre o sistema operacional (Gnome, KDE)                                                                    |
+| **Command line / Terminal** | é a interface para digitação de comandos para o sistema operacional                                                          |
+| **Shell**                   | é o interpretador da command line que traduz os comandos em linguagem de máquina para execução (bash, zsh)                   |
+
+## *Filesystem Hierarchy Standard* {#fhs}
+
+Todo sistema de arquivos consiste em uma metodologia de organização de conjunto de dados de uma forma que este seja transparente e compreensível para o usuário. O sistema de arquivo é armazenado em um container chamado **partição**, podendo ocupar uma única ou várias partições através de links simbólicos.
+
+O *Filesystem Hierarchy Standard* é um padrão de armazenamento de dados gerenciado pela Linux Foundation. O objetivo deste padrão é determinar regras de implementação do sistema de arquivos de maneira que independente da distribuição, o mesmo padrão seja mantido, facilitando assim a interoperabilidade e migrações entre distribuições.
+
+Diferente do Windows, o Linux utiliza a '/' como separador de *paths* (caminhos) e não possui letras para drives, sendo as partições montadas como diretórios no sistema de arquivo. Na tabela abaixo podemos observar algumas diferenças entre os dois sistemas operacionais.
+
+|                        | Windows        | Linux                  |
+|------------------------|----------------|------------------------|
+| Partição               | Disco1         | /dev/sda1              |
+| Tipo de Sistema        | NTFS/VFAT      | EXT3/EXT4/XFS/BTRFS... |
+| Parâmetros de Montagem | Letra de Drive | Ponto de Montagem      |
+| Diretório Raiz         | C:\\           | /                      |
+
+## Estrutura de diretórios {#diretorios}
+
+A imagem abaixo ilustra alguns dos principais diretórios em um sistema de arquivos Linux.
+
+![Anatomia de um sistema de Arquivos Linux [^1]](images/linux_dir.png){fig-align="center"}
+
+[^1]: Fonte: <https://tinyurl.com/47xm5fmj>
+
+[^2]: Fonte: <https://tinyurl.com/47xm5fmj>
+
+O LFS é *case sensitive*, ou seja, diferencia letras maíusculas de minúsculas, sendo assim `/boot`, `/Boot` e `/BOOT` representam três diretórios diferentes, o mesmo sendo aplicado para nomes de arquivos.
