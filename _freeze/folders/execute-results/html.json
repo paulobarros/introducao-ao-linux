@@ -1,0 +1,11 @@
+{
+  "hash": "5812239012c4d05c788598f411ec1bcd",
+  "result": {
+    "markdown": "---\ntitle: \"{{< fa folder-open >}} Diretórios\"\nlang: pt-BR\n---\n\nOs comandos a seguir são essenciais na gestão de diretórios no Linux. Importante lembrar que a maioria dos diretórios dentro do Linux irão requerer permissão de superusuário para que possam ser modificados. Esses diretórios em um servidor são de responsabilidade do adminstrador do sistema e estarão fora do escopo de permissões de um usuário, por esse motivo abordaremos operações comuns que podem ser realizadas na nossa pasta de usuário `/home`.\n\n:::{.callout-note}\n###  \n\nAs funções não serão abordadas em detalhes, serão apresentados os usos de caso mais comuns, para maiores informações de cada função acesse a sua respectiva **_man page_** usando o terminal.\n:::\n\n\n\n### Diretório de Trabalho\n\n`pwd` - _print working directory_\n\n\n```{default}\npwd\n```\n\n\n```\n/home/paulo/Documents/SandBox\n```\n\n### Listando conteúdo do diretório\n\n`ls` - _list directory contents_\n\n![](images/ls.png){fig-align=\"center\" width=\"500\"}\n\n",
+    "supporting": [
+      "folders_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

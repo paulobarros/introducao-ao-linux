@@ -41,6 +41,7 @@ website:
       - section: lfs/index.qmd
         contents: 
           - lfs/terminal.qmd
+          - lfs/folders.qmd
 
 format:
   html:
@@ -54,6 +55,7 @@ format:
     code-line-numbers: true
     highlight-style: dracula
     toc: true
+  
 
 execute:
   freeze: auto
