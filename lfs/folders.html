@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introdução ao GNU/Linux - Linux File System</title>
+<title>Introdução ao GNU/Linux -  Diretórios</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -15,6 +15,69 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -24,8 +87,7 @@ ul.task-list{list-style: none;}
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lfs/terminal.html" rel="next">
-<link href="../linux.html" rel="prev">
+<link href="../lfs/terminal.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -67,7 +129,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Linux File System</h1>
+      <h1 class="quarto-secondary-nav-title"><i class="fa-solid fa-folder-open"></i> Diretórios</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -113,7 +175,7 @@ ul.task-list{list-style: none;}
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../lfs/index.html" class="sidebar-item-text sidebar-link active">Linux File System</a>
+            <a href="../lfs/index.html" class="sidebar-item-text sidebar-link">Linux File System</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -126,7 +188,7 @@ ul.task-list{list-style: none;}
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lfs/folders.html" class="sidebar-item-text sidebar-link"><i class="fa-solid fa-folder-open"></i> Diretórios</a>
+  <a href="../lfs/folders.html" class="sidebar-item-text sidebar-link active"><i class="fa-solid fa-folder-open"></i> Diretórios</a>
   </div>
 </li>
       </ul>
@@ -140,9 +202,8 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#terminologia" id="toc-terminologia" class="nav-link active" data-scroll-target="#terminologia">Terminologia</a></li>
-  <li><a href="#fhs" id="toc-fhs" class="nav-link" data-scroll-target="#fhs"><em>Filesystem Hierarchy Standard</em></a></li>
-  <li><a href="#diretorios" id="toc-diretorios" class="nav-link" data-scroll-target="#diretorios">Estrutura de diretórios</a></li>
+  <li><a href="#diretório-de-trabalho" id="toc-diretório-de-trabalho" class="nav-link active" data-scroll-target="#diretório-de-trabalho">Diretório de Trabalho</a></li>
+  <li><a href="#listando-conteúdo-de-diretórios" id="toc-listando-conteúdo-de-diretórios" class="nav-link" data-scroll-target="#listando-conteúdo-de-diretórios">Listando conteúdo de diretórios</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/paulobarros/introducao-ao-linux/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
     </div>
@@ -151,7 +212,7 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Linux File System</h1>
+<h1 class="title d-none d-lg-block"><i class="fa-solid fa-folder-open"></i> Diretórios</h1>
 </div>
 
 
@@ -165,107 +226,64 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<section id="terminologia" class="level2">
-<h2 class="anchored" data-anchor-id="terminologia">Terminologia</h2>
-<p>Antes de mais nada, é interessante que você esteja familiarizad@ com a terminologia de um sistema Linux. Estes são alguns termos comuns que com certeza aparecerão ao longo do nosso curso.</p>
-<table class="table">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 81%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Termo</th>
-<th>Significado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Kernel</strong></td>
-<td>é a interface entre aplicação e hardware.</td>
-</tr>
-<tr class="even">
-<td><strong>Distribuição</strong></td>
-<td>é uma coleção de programas combinados com o kernel Linux. Debian, Ubuntu, Red Hat, Suse são exemplos de distribuições Linux.</td>
-</tr>
-<tr class="odd">
-<td><strong>Boot loader</strong></td>
-<td>é o programa que inicializa o sistema operacional (todo OS necessita de um boot loader)</td>
-</tr>
-<tr class="even">
-<td><strong>Service</strong></td>
-<td>é um programa que roda como um background process</td>
-</tr>
-<tr class="odd">
-<td><strong>File System</strong></td>
-<td>é uma metodologia de armazenamento e organização de arquivos (ext3, ext4, FAT, XFS, NTFS)</td>
-</tr>
-<tr class="even">
-<td><strong>X Window System</strong></td>
-<td>proporciona o framework necessário para desenvolvimento interfaces gráficas (GUI) em praticamente todos os sistemas Linux</td>
-</tr>
-<tr class="odd">
-<td><strong>Desktop Environment</strong></td>
-<td>é a GUI que roda sobre o sistema operacional (Gnome, KDE)</td>
-</tr>
-<tr class="even">
-<td><strong>Command line / Terminal</strong></td>
-<td>é a interface para digitação de comandos para o sistema operacional</td>
-</tr>
-<tr class="odd">
-<td><strong>Shell</strong></td>
-<td>é o interpretador da command line que traduz os comandos em linguagem de máquina para execução (bash, zsh)</td>
-</tr>
-</tbody>
-</table>
+<p>Os comandos a seguir são essenciais na gestão de diretórios no Linux. Importante lembrar que a maioria dos diretórios dentro do Linux irão requerer permissão de superusuário para que possam ser modificados. Esses diretórios em um servidor são de responsabilidade do adminstrador do sistema e estarão fora do escopo de permissões de um usuário, por esse motivo abordaremos operações comuns que podem ser realizadas na nossa pasta de usuário <code>/home</code>.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As funções não serão abordadas em detalhes, serão apresentados os usos de caso mais comuns, para maiores informações de cada função acesse a sua respectiva <strong><em>man page</em></strong> usando o terminal.</p>
+</div>
+</div>
+<section id="diretório-de-trabalho" class="level3">
+<h3 class="anchored" data-anchor-id="diretório-de-trabalho">Diretório de Trabalho</h3>
+<p><code>pwd</code> - <em>print working directory</em></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>pwd</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>/home/paulo/Documents/SandBox</code></pre>
 </section>
-<section id="fhs" class="level2">
-<h2 class="anchored" data-anchor-id="fhs"><em>Filesystem Hierarchy Standard</em></h2>
-<p>Todo sistema de arquivos consiste em uma metodologia de organização de conjunto de dados de uma forma que este seja transparente e compreensível para o usuário. O sistema de arquivo é armazenado em um container chamado <strong>partição</strong>, podendo ocupar uma única ou várias partições através de links simbólicos.</p>
-<p>O <em>Filesystem Hierarchy Standard</em> é um padrão de armazenamento de dados gerenciado pela Linux Foundation. O objetivo deste padrão é determinar regras de implementação do sistema de arquivos de maneira que independente da distribuição, o mesmo padrão seja mantido, facilitando assim a interoperabilidade e migrações entre distribuições.</p>
-<p>Diferente do Windows, o Linux utiliza a ‘/’ como separador de <em>paths</em> (caminhos) e não possui letras para drives, sendo as partições montadas como diretórios no sistema de arquivo. Na tabela abaixo podemos observar algumas diferenças entre os dois sistemas operacionais.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th></th>
-<th>Windows</th>
-<th>Linux</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Partição</td>
-<td>Disco1</td>
-<td>/dev/sda1</td>
-</tr>
-<tr class="even">
-<td>Tipo de Sistema</td>
-<td>NTFS/VFAT</td>
-<td>EXT3/EXT4/XFS/BTRFS…</td>
-</tr>
-<tr class="odd">
-<td>Parâmetros de Montagem</td>
-<td>Letra de Drive</td>
-<td>Ponto de Montagem</td>
-</tr>
-<tr class="even">
-<td>Diretório Raiz</td>
-<td>C:\</td>
-<td>/</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="diretorios" class="level2">
-<h2 class="anchored" data-anchor-id="diretorios">Estrutura de diretórios</h2>
-<p>A imagem abaixo ilustra alguns dos principais diretórios em um sistema de arquivos Linux.</p>
+<section id="listando-conteúdo-de-diretórios" class="level3">
+<h3 class="anchored" data-anchor-id="listando-conteúdo-de-diretórios">Listando conteúdo de diretórios</h3>
+<p><code>ls</code> - <em>list directory contents</em></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/linux_dir.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Anatomia de um sistema de Arquivos Linux <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></figcaption><p></p>
+<p><img src="images/ls.png" class="img-fluid figure-img" width="700"></p>
 </figure>
 </div>
-<p>O LFS é <em>case sensitive</em>, ou seja, diferencia letras maíusculas de minúsculas, sendo assim <code>/boot</code>, <code>/Boot</code> e <code>/BOOT</code> representam três diretórios diferentes, o mesmo sendo aplicado para nomes de arquivos.</p>
+<p>O terminal pode apresentar os resultados com esquemas de cores diferentes a depender do tipo de shell sendo utilizado. De maneira geral, diretórios são destacados com cores (azul neste caso), diferenciando-os de arquivos de texto (branco), imagens (roxo), e arquivos com permissão de execução ou outros formatos especiais (verde).</p>
+<p>Utilizando opções é possível modificar o tipo de saída. Por padrão o comando <code>ls</code> não exibe arquivos ou diretórios ocultos, isto pode ser alterado utilizando a opção <code>a</code>. A opção <code>l</code> lista o conteúdo em um formato mais longo e detalhado. É possível combinar opções ou simplesmente listá-las uma após a outra, lembrando sempre de consultar a documentação para o uso de <code>-</code> ou <code>--</code>. Por exemplo, os dois comandos abaixo retornam o mesmo resultado.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a href="#cb3-1"></a>ls -l -a</span>
+<span id="cb3-2"><a href="#cb3-2"></a>ls -la</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ls-la.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<p>Algumas opções também possuem uma descrição literal, sendo mais fáceis de lembrar, embora requeiram mais digitação. A opção <code>a</code> poderia ser substituida por <code>all</code>, essas não podem ser concatenadas e devem ser declaradas separadamente. Nem todas as opções possuem uma forma alternativa no padrão GNU, é sempre bom checar a documentação. O comando abaixo retorna a mesma saída do último que rodamos acima.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a href="#cb4-1"></a>ls -l --all</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>É possível listar arquivos específicos passando como argumento para o <code>ls</code> a extensão do arquivo ou parte do nome por exemplo. O comando abaixo lista todos os arquivos com extensão <code>.R</code>, o <code>*</code> é um caractere de <strong>expressão regular</strong> que indica para o comando que o objetivo é buscar qualquer nome de arquivo desde que este termine com a extensão desejada.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a href="#cb5-1"></a>ls *.R</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ls-ext.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a href="#cb6-1"></a>ls *map*</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/ls-map.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<p>Expressões regulares são muito úteis e utilizadas constantemente em diversos comandos de terminal, falaremos mais em detalhes ao longo do curso. Na imagem abaixo<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> seguem alguns coringas que podem ser utilizados para otimizar buscas por arquivos e diretórios no sistema.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/wildcards.png" height="700" class="figure-img"></p>
+</figure>
+</div>
 
 
 </section>
@@ -274,7 +292,7 @@ ul.task-list{list-style: none;}
 <div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Notas de rodapé</h2>
 
 <ol>
-<li id="fn1" role="doc-endnote"><p>Fonte: <a href="https://tinyurl.com/47xm5fmj" class="uri">https://tinyurl.com/47xm5fmj</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>Haeder <em>et al.</em>, 2010. LPI Linux Certification, Third Edition, O’Reilly Media.p. 101.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -479,14 +497,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../linux.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">O que é o Linux?</span>
+      <a href="../lfs/terminal.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><i class="fa-solid fa-terminal"></i> Terminal</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lfs/terminal.html" class="pagination-link">
-        <span class="nav-page-text"><i class="fa-solid fa-terminal"></i> Terminal</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

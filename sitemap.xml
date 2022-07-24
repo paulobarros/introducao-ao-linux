@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/paulobarros/introducao-ao-linux/wsl.html</loc>
-    <lastmod>2022-07-24T16:04:38.214Z</lastmod>
+    <lastmod>2022-07-24T19:01:44.429Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/paulobarros/introducao-ao-linux/lfs/terminal.html</loc>
-    <lastmod>2022-07-24T16:04:39.562Z</lastmod>
+    <lastmod>2022-07-24T19:01:45.821Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/paulobarros/introducao-ao-linux/lfs/folders.html</loc>
+    <lastmod>2022-07-24T19:01:46.537Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/paulobarros/introducao-ao-linux/lfs/index.html</loc>
-    <lastmod>2022-07-24T16:04:39.970Z</lastmod>
+    <lastmod>2022-07-24T19:01:46.929Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/paulobarros/introducao-ao-linux/linux.html</loc>
-    <lastmod>2022-07-24T16:04:40.302Z</lastmod>
+    <lastmod>2022-07-24T19:01:47.309Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/paulobarros/introducao-ao-linux/about.html</loc>
-    <lastmod>2022-07-24T16:04:40.822Z</lastmod>
+    <lastmod>2022-07-24T19:01:47.817Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/paulobarros/introducao-ao-linux/index.html</loc>
-    <lastmod>2022-07-24T16:04:41.162Z</lastmod>
+    <lastmod>2022-07-24T19:01:48.165Z</lastmod>
   </url>
   <url>
     <loc>https://github.com/paulobarros/introducao-ao-linux/operacoes/index.html</loc>
-    <lastmod>2022-07-24T16:04:41.534Z</lastmod>
+    <lastmod>2022-07-24T19:01:48.537Z</lastmod>
   </url>
 </urlset>
