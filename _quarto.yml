@@ -55,4 +55,5 @@ format:
     highlight-style: dracula
     toc: true
 
-
+execute:
+  freeze: auto
