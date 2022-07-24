@@ -6,12 +6,10 @@ lang: pt-BR
 Os comandos a seguir são essenciais na gestão de diretórios no Linux. Importante lembrar que a maioria dos diretórios dentro do Linux irão requerer permissão de superusuário para que possam ser modificados. Esses diretórios em um servidor são de responsabilidade do adminstrador do sistema e estarão fora do escopo de permissões de um usuário, por esse motivo abordaremos operações comuns que podem ser realizadas na nossa pasta de usuário `/home`.
 
 ::: callout-note
-### 
-
 As funções não serão abordadas em detalhes, serão apresentados os usos de caso mais comuns, para maiores informações de cada função acesse a sua respectiva ***man page*** usando o terminal.
 :::
 
-### Diretório de Trabalho
+## Diretório de Trabalho
 
 `pwd` - *print working directory*
 
@@ -21,11 +19,12 @@ pwd
 
     /home/paulo/Documents/SandBox
 
-### Listando conteúdo de diretórios
+## Listando conteúdo de diretórios
 
 `ls` - *list directory contents*
 
 ![](images/ls.png){fig-align="center" width="700"}
+
 
 O terminal pode apresentar os resultados com esquemas de cores diferentes a depender do tipo de shell sendo utilizado. De maneira geral, diretórios são destacados com cores (azul neste caso), diferenciando-os de arquivos de texto (branco), imagens (roxo), e arquivos com permissão de execução ou outros formatos especiais (verde).
 
