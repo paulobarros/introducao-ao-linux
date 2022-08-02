@@ -42,6 +42,7 @@ website:
         contents: 
           - lfs/terminal.qmd
           - lfs/folders.qmd
+          - lfs/files.qmd
 
 format:
   html:

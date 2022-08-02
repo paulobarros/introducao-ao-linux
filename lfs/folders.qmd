@@ -1,5 +1,5 @@
 ---
-title: "{{< fa folder-open >}} Diretórios"
+title: "{{< fa regular folder-open >}} Diretórios"
 lang: pt-BR
 ---
 
@@ -62,4 +62,127 @@ Expressões regulares são muito úteis e utilizadas constantemente em diversos 
 [^1]: Haeder _et al._, 2010. LPI Linux Certification, Third Edition, O'Reilly Media.p. 101.
 
 ![](images/wildcards.png){fig-align="center" height="700"}
+
+## Criando diretórios
+
+`mkdir` [opções] _diretórios_: cria um ou mais diretórios, você precisa ter permissão de escrita no diretório destino.
+
+```{default}
+mkdir meu_diretorio
+```
+
+![](images/mkdir_a.png){fig-align="center" width="700"}
+
+Duas das opções mais utilizadas com o `mkdir` são `-m` e `-p`. A opção `-m`define o **modo de acesso** do diretório a ser criado. A opção `-p` cria diretórios superiores, caso eles não existam.
+
+```{default}
+# a opção -m 444 define modo de somente leitura para o novo diretório
+mkdir -m 444 minha_pasta 
+```
+
+![](images/mkdir_mode.png){fig-align="center" width="700"}
+
+Observe as diferenças nas permissões de arquivos para as duas pastas. `d` refere-se a _directory_ , `r` a _read_, `w` a _write_ e `x` a _execution_. Estas três são as classes de acesso/permissão de arquivos e diretórios no Linux, leitura, escrita e execução. O bloco de acesso é formado por três trincas representando as permissões para `Usuário`, `Grupo` e `Outro` respectivamente. O usuário que é o dono do arquivo, o grupo proprietário do arquivo (todo usuário do Linux pertence a um grupo no sistema) e o acesso para outros usuários.
+
+É possível criar múltiplos diretórios com um único comando, basta separar os nomes dos diretórios por espaços. 
+
+```{default}
+mkdir folder_a folder_b
+```
+
+
+![](images/mkdir_multi.png){fig-align="center" width="700"}
+
+Também é possível a criação de árvores de diretório com a opção `-p` para a criação dos diretórios superiores caso estes ainda não tenham sido criados.
+
+```{default}
+mkdir -p dir1/dir2/dir3
+```
+
+
+![](images/mkdir_tree.png){fig-align="center" width="700"}
+
+Embora criar diretórios possa parecer uma tarefa trivial e que pode ser realizada de maneira visual em qualquer navegador de arquivos de um SO, quando falamos de estruturas de diretórios mais complexas com muitos níveis o terminal é uma enorme ajuda. Por exemplo, imagine que tenhamos um projeto com uma estrutura bem definida de diretórios e subdiretórios, visualmente teríamos que criar cada pasta individualmente, quando no terminal em um único comando toda a estrutura é criada. Veja o exemplo.
+
+
+```{default}
+mkdir -p meu_projeto/{data/{raw,clean},imagens,relatorios/{pdf,html}}
+
+```
+
+![](images/mkdir_proj_tree.png){fig-align="center" width="800"}
+
+Neste caso, passamos para o comando a nossa estrutura na forma de `diretorio/{subdiretório}`, separando os múltiplos subdiretórios por `,`, caso um subdiretório contenha outros subdiretórios, o padrão é o mesmo como pode ser observado no exemplo.
+
+## Copiando, Movendo e Deletando diretórios
+
+### Copiando
+
+`cp` [opções] _arquivo_fonte_ _arquivo_destino_: copia arquivos
+
+`cp` [opções] _arquivo_fonte_ _diretório_destino_: copia arquivos para um diretório específico
+
+```{default}
+cp -r folder_a folder_b
+```
+
+![](images/cp_dir.png){fig-align="center" width="700"}
+
+Neste exemplo a pasta `folder_a` é copiada para a pasta `folder_b`. A opção `-r` indica que a cópia é recursiva, ou seja, inclui também a pasta `folder_a`, sem o uso desta opção apenas o conteúdo da pasta é copiada, mas não a pasta em si. Essa opção é muito utilizada em todas as operações de modificação de diretórios que veremos a seguir.
+
+Para duplicar uma pasta o comando é o mesmo, observando apenas a mudança do nome da pasta destino.
+
+```{default}
+cp -r folder_a folder_c
+```
+
+### Movendo e Renomeando
+
+`mv` [opções] _fonte_ _destino_
+
+O comando `mv` é utilizando tanto para mover diretórios quanto para renomeá-los.
+
+```{default}
+mv dir1 dir_1
+```
+
+![](images/mv_dir.png){fig-align="center" width="700"}
+
+```{default}
+mv -i folder_a folder_b
+
+```
+
+![](images/mv_dir_2.png){fig-align="center" width="700"}
+
+No primeiro exemplo, o diretório `dir1` foi renomeado para `dir_1`. No segundo exemplo o diretório `folder_a` foi movido para `folder_b`. A opção `-i` consulta interativamente o usuário antes de mover os arquivos, como neste caso já existia um outro diretório de mesmo nome na pasta destino, o terminal pergunta se o usuário gostaria de sobrescrever o diretório pré-existente. Após a confirmação o comando é executado.
+
+### Removendo diretórios
+
+`rm` [opções] _arquivos_
+
+```{default}
+rm -r folder_a
+```
+
+
+![](images/rm_dir.png){fig-aling="center" width="700"}
+
+:::{.callout-note}
+### Importante
+
+Observe o uso da opção `-r`, essa opção é necessária se a intenção é remover todos os arquivos e o próprio diretório. Sem esta opção os arquivos internos serão excluídos e o diretório será preservado.
+:::
+
+`rmdir` [opções] _diretórios_
+
+O comando `rmdir` também pode ser utilizado para excluir diretórios, entretanto, os diretórios precisam estar vazios. Uma combinação com a opção `-p` permite que diretórios superiores que também estejam vazios sejam removidos.
+
+```{default}
+rmdir -p meu_projeto/relatorios/html
+```
+
+![](images/rmdir.png){fig-aling="center" width="700"}
+
+Observe na estrutura dos diretórios, embora o comando emita uma mensagem de erro informando que a pasta `meu_projeto` não pode ser excluída por não estar vazia, ele remove com sucesso a pasta `html` vazia, e o diretório ascendente `relatorios`, vazio após a exclusão feita anteriormente. Esse comando é muito útil para remoção de estrutura de diretórios de forma automatizada.
 

@@ -1,0 +1,30 @@
+---
+title: "{{< fa regular file >}} Arquivos"
+lang: pt-BR
+---
+
+## Copiando, Movendo, Renomeando e Excluindo
+
+Muitos dos comandos que vimos anteriormente para realizar operações com diretórios também são utilizados no gerenciamento dos arquivos. 
+
+### Copiando
+
+`cp` [opções] _arquivo_fonte_ _arquivo_destino_: copia arquivos
+
+`cp` [opções] _arquivo_fonte_ _diretório_destino_: copia arquivos para um diretório específico
+
+
+
+```{default}
+cp dir_1/file1.txt dir_1/file2.txt
+```
+
+![](images/dup_files.png){fig-align="center" width="700"}
+
+```{default}
+cp dir_1/*.txt folder_b/
+```
+
+![](images/copy_files.png){fig-align="center" width="700"}
+
+No primeiro caso estamos fazendo uma cópia do arquivo `file1.txt` chamado `file2.txt`. No segundo exemplo os arquivos `.txt` dentro de `dir_1` estão sendo copiados para a pasta `folder_b`. Observe que somente o conteúdo do diretório está sendo copiado, para que o diretório `dir_1` também seja incluido na cópia é necessário o uso da opção `-r`. Arquivos podem ser copiados para qualquer local no sistema desde que o caminho correto seja especificado no diretório destino, respeitando obviamente as permissões de acesso para cada usuário como vimos anteriormente.
