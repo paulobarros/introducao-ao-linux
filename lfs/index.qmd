@@ -48,5 +48,9 @@ O LFS é *case sensitive*, ou seja, diferencia letras maíusculas de minúsculas
 
 Se quiser saber um pouco mais sobre o LFS o vídeo abaixo tem uma breve explicação de cada diretório do sistema.
 
-[![](images/lfs_vid.png){fig-align="center" width="500"}](https://youtu.be/42iQKuQodW4)
+
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube.com/embed/42iQKuQodW4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 

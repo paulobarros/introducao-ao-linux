@@ -19,3 +19,12 @@ $code-bg: rgba(#ECEFF1,1);
 
 
 /*-- scss:rules --*/
+
+.ratio-16x9 {
+    --bs-aspect-ratio: calc(9 / 16 * 100%);
+}
+
+.ratio {
+    position: relative;
+    width: 100%;
+}
