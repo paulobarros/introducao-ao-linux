@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.0.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -87,6 +87,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../lfs/files.html" rel="next">
 <link href="../lfs/terminal.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -129,7 +130,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><i class="fa-solid fa-folder-open"></i> Diretórios</h1>
+      <h1 class="quarto-secondary-nav-title"><i class="fa-regular fa-folder-open"></i> Diretórios</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -188,7 +189,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lfs/folders.html" class="sidebar-item-text sidebar-link active"><i class="fa-solid fa-folder-open"></i> Diretórios</a>
+  <a href="../lfs/folders.html" class="sidebar-item-text sidebar-link active"><i class="fa-regular fa-folder-open"></i> Diretórios</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lfs/files.html" class="sidebar-item-text sidebar-link"><i class="fa-regular fa-file"></i> Arquivos</a>
   </div>
 </li>
       </ul>
@@ -204,6 +210,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#diretório-de-trabalho" id="toc-diretório-de-trabalho" class="nav-link active" data-scroll-target="#diretório-de-trabalho">Diretório de Trabalho</a></li>
   <li><a href="#listando-conteúdo-de-diretórios" id="toc-listando-conteúdo-de-diretórios" class="nav-link" data-scroll-target="#listando-conteúdo-de-diretórios">Listando conteúdo de diretórios</a></li>
+  <li><a href="#criando-diretórios" id="toc-criando-diretórios" class="nav-link" data-scroll-target="#criando-diretórios">Criando diretórios</a></li>
+  <li><a href="#copiando-movendo-e-deletando-diretórios" id="toc-copiando-movendo-e-deletando-diretórios" class="nav-link" data-scroll-target="#copiando-movendo-e-deletando-diretórios">Copiando, Movendo e Deletando diretórios</a>
+  <ul class="collapse">
+  <li><a href="#copiando" id="toc-copiando" class="nav-link" data-scroll-target="#copiando">Copiando</a></li>
+  <li><a href="#movendo-e-renomeando" id="toc-movendo-e-renomeando" class="nav-link" data-scroll-target="#movendo-e-renomeando">Movendo e Renomeando</a></li>
+  <li><a href="#removendo-diretórios" id="toc-removendo-diretórios" class="nav-link" data-scroll-target="#removendo-diretórios">Removendo diretórios</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/paulobarros/introducao-ao-linux/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
     </div>
@@ -212,7 +225,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><i class="fa-solid fa-folder-open"></i> Diretórios</h1>
+<h1 class="title d-none d-lg-block"><i class="fa-regular fa-folder-open"></i> Diretórios</h1>
 </div>
 
 
@@ -284,8 +297,116 @@ Nota
 <p><img src="images/wildcards.png" height="700" class="figure-img"></p>
 </figure>
 </div>
+</section>
+<section id="criando-diretórios" class="level2">
+<h2 class="anchored" data-anchor-id="criando-diretórios">Criando diretórios</h2>
+<p><code>mkdir</code> [opções] <em>diretórios</em>: cria um ou mais diretórios, você precisa ter permissão de escrita no diretório destino.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a href="#cb7-1"></a>mkdir meu_diretorio</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mkdir_a.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<p>Duas das opções mais utilizadas com o <code>mkdir</code> são <code>-m</code> e <code>-p</code>. A opção <code>-m</code>define o <strong>modo de acesso</strong> do diretório a ser criado. A opção <code>-p</code> cria diretórios superiores, caso eles não existam.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a href="#cb8-1"></a># a opção -m 444 define modo de somente leitura para o novo diretório</span>
+<span id="cb8-2"><a href="#cb8-2"></a>mkdir -m 444 minha_pasta </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mkdir_mode.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<p>Observe as diferenças nas permissões de arquivos para as duas pastas. <code>d</code> refere-se a <em>directory</em> , <code>r</code> a <em>read</em>, <code>w</code> a <em>write</em> e <code>x</code> a <em>execution</em>. Estas três são as classes de acesso/permissão de arquivos e diretórios no Linux, leitura, escrita e execução. O bloco de acesso é formado por três trincas representando as permissões para <code>Usuário</code>, <code>Grupo</code> e <code>Outro</code> respectivamente. O usuário que é o dono do arquivo, o grupo proprietário do arquivo (todo usuário do Linux pertence a um grupo no sistema) e o acesso para outros usuários.</p>
+<p>É possível criar múltiplos diretórios com um único comando, basta separar os nomes dos diretórios por espaços.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a href="#cb9-1"></a>mkdir folder_a folder_b</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mkdir_multi.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<p>Também é possível a criação de árvores de diretório com a opção <code>-p</code> para a criação dos diretórios superiores caso estes ainda não tenham sido criados.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a href="#cb10-1"></a>mkdir -p dir1/dir2/dir3</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mkdir_tree.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<p>Embora criar diretórios possa parecer uma tarefa trivial e que pode ser realizada de maneira visual em qualquer navegador de arquivos de um SO, quando falamos de estruturas de diretórios mais complexas com muitos níveis o terminal é uma enorme ajuda. Por exemplo, imagine que tenhamos um projeto com uma estrutura bem definida de diretórios e subdiretórios, visualmente teríamos que criar cada pasta individualmente, quando no terminal em um único comando toda a estrutura é criada. Veja o exemplo.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a href="#cb11-1"></a>mkdir -p meu_projeto/{data/{raw,clean},imagens,relatorios/{pdf,html}}</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mkdir_proj_tree.png" class="img-fluid figure-img" width="800"></p>
+</figure>
+</div>
+<p>Neste caso, passamos para o comando a nossa estrutura na forma de <code>diretorio/{subdiretório}</code>, separando os múltiplos subdiretórios por <code>,</code>, caso um subdiretório contenha outros subdiretórios, o padrão é o mesmo como pode ser observado no exemplo.</p>
+</section>
+<section id="copiando-movendo-e-deletando-diretórios" class="level2">
+<h2 class="anchored" data-anchor-id="copiando-movendo-e-deletando-diretórios">Copiando, Movendo e Deletando diretórios</h2>
+<section id="copiando" class="level3">
+<h3 class="anchored" data-anchor-id="copiando">Copiando</h3>
+<p><code>cp</code> [opções] <em>arquivo_fonte</em> <em>arquivo_destino</em>: copia arquivos</p>
+<p><code>cp</code> [opções] <em>arquivo_fonte</em> <em>diretório_destino</em>: copia arquivos para um diretório específico</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href="#cb12-1"></a>cp -r folder_a folder_b</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/cp_dir.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<p>Neste exemplo a pasta <code>folder_a</code> é copiada para a pasta <code>folder_b</code>. A opção <code>-r</code> indica que a cópia é recursiva, ou seja, inclui também a pasta <code>folder_a</code>, sem o uso desta opção apenas o conteúdo da pasta é copiada, mas não a pasta em si. Essa opção é muito utilizada em todas as operações de modificação de diretórios que veremos a seguir.</p>
+<p>Para duplicar uma pasta o comando é o mesmo, observando apenas a mudança do nome da pasta destino.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a href="#cb13-1"></a>cp -r folder_a folder_c</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="movendo-e-renomeando" class="level3">
+<h3 class="anchored" data-anchor-id="movendo-e-renomeando">Movendo e Renomeando</h3>
+<p><code>mv</code> [opções] <em>fonte</em> <em>destino</em></p>
+<p>O comando <code>mv</code> é utilizando tanto para mover diretórios quanto para renomeá-los.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href="#cb14-1"></a>mv dir1 dir_1</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mv_dir.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a href="#cb15-1"></a>mv -i folder_a folder_b</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/mv_dir_2.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<p>No primeiro exemplo, o diretório <code>dir1</code> foi renomeado para <code>dir_1</code>. No segundo exemplo o diretório <code>folder_a</code> foi movido para <code>folder_b</code>. A opção <code>-i</code> consulta interativamente o usuário antes de mover os arquivos, como neste caso já existia um outro diretório de mesmo nome na pasta destino, o terminal pergunta se o usuário gostaria de sobrescrever o diretório pré-existente. Após a confirmação o comando é executado.</p>
+</section>
+<section id="removendo-diretórios" class="level3">
+<h3 class="anchored" data-anchor-id="removendo-diretórios">Removendo diretórios</h3>
+<p><code>rm</code> [opções] <em>arquivos</em></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a href="#cb16-1"></a>rm -r folder_a</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rm_dir.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Importante
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Observe o uso da opção <code>-r</code>, essa opção é necessária se a intenção é remover todos os arquivos e o próprio diretório. Sem esta opção os arquivos internos serão excluídos e o diretório será preservado.</p>
+</div>
+</div>
+<p><code>rmdir</code> [opções] <em>diretórios</em></p>
+<p>O comando <code>rmdir</code> também pode ser utilizado para excluir diretórios, entretanto, os diretórios precisam estar vazios. Uma combinação com a opção <code>-p</code> permite que diretórios superiores que também estejam vazios sejam removidos.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a href="#cb17-1"></a>rmdir -p meu_projeto/relatorios/html</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rmdir.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<p>Observe na estrutura dos diretórios, embora o comando emita uma mensagem de erro informando que a pasta <code>meu_projeto</code> não pode ser excluída por não estar vazia, ele remove com sucesso a pasta <code>html</code> vazia, e o diretório ascendente <code>relatorios</code>, vazio após a exclusão feita anteriormente. Esse comando é muito útil para remoção de estrutura de diretórios de forma automatizada.</p>
 
 
+</section>
 </section>
 
 
@@ -502,6 +623,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../lfs/files.html" class="pagination-link">
+        <span class="nav-page-text"><i class="fa-regular fa-file"></i> Arquivos</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

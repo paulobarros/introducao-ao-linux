@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introdução ao GNU/Linux -  Terminal</title>
+<title>Introdução ao GNU/Linux -  Arquivos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -87,8 +87,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../lfs/folders.html" rel="next">
-<link href="../lfs/index.html" rel="prev">
+<link href="../lfs/folders.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -130,7 +129,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><i class="fa-solid fa-terminal"></i> Terminal</h1>
+      <h1 class="quarto-secondary-nav-title"><i class="fa-regular fa-file"></i> Arquivos</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -184,7 +183,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lfs/terminal.html" class="sidebar-item-text sidebar-link active"><i class="fa-solid fa-terminal"></i> Terminal</a>
+  <a href="../lfs/terminal.html" class="sidebar-item-text sidebar-link"><i class="fa-solid fa-terminal"></i> Terminal</a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -194,7 +193,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../lfs/files.html" class="sidebar-item-text sidebar-link"><i class="fa-regular fa-file"></i> Arquivos</a>
+  <a href="../lfs/files.html" class="sidebar-item-text sidebar-link active"><i class="fa-regular fa-file"></i> Arquivos</a>
   </div>
 </li>
       </ul>
@@ -208,9 +207,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Nesta página</h2>
    
   <ul>
-  <li><a href="#rtfm" id="toc-rtfm" class="nav-link active" data-scroll-target="#rtfm">Read the Freaking Manual!</a></li>
-  <li><a href="#utils" id="toc-utils" class="nav-link" data-scroll-target="#utils">Algumas funções úteis</a></li>
-  <li><a href="#sudo" id="toc-sudo" class="nav-link" data-scroll-target="#sudo"><strong>sudo</strong></a></li>
+  <li><a href="#copiando-movendo-renomeando-e-excluindo" id="toc-copiando-movendo-renomeando-e-excluindo" class="nav-link active" data-scroll-target="#copiando-movendo-renomeando-e-excluindo">Copiando, Movendo, Renomeando e Excluindo</a>
+  <ul class="collapse">
+  <li><a href="#copiando" id="toc-copiando" class="nav-link" data-scroll-target="#copiando">Copiando</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/paulobarros/introducao-ao-linux/issues/new" class="toc-action">Criar uma issue</a></p></div></div></nav>
     </div>
@@ -219,7 +219,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><i class="fa-solid fa-terminal"></i> Terminal</h1>
+<h1 class="title d-none d-lg-block"><i class="fa-regular fa-file"></i> Arquivos</h1>
 </div>
 
 
@@ -233,68 +233,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>Embora o Linux tenha ganhado seu espaço no mercado dos computadores pessoais nas últimas décadas graças a distribuições cada vez mais simples e bem desenvolvidas, o seu uso em <strong>servidores</strong> é aonde o sistema mostra de fato sua robustez e confiabilidade.</p>
-<p>Com o barateamento dos custos de produção, ainda que servidores hoje sejam muito mais potentes custando bem menos que há algumas décadas, encontrar uma interface gráfica (GUI) rodando em um sistema Linux em um servidor não é tão comum. O motivo é que servidores são projetados para tarefas que exigem grande custo computacional, sendo assim, toda economia de recursos é importante, e uma interface gráfica apenas consumiria recursos de memória e espaço em disco que poderiam ser alocados para outros processos.</p>
-<p>Por esse motivo, conhecer os comandos básicos do terminal do Linux é essencial na hora de utilizar o sistema sem uma interface gráfica. Navegar em diretórios, criar e editar arquivos, utilizar linguagens de script para otimizar e automatizar rotinas repetitivas são algumas das habilidades necessárias para qualquer Cientista de Dados hoje em dia.</p>
-<p>Toda entrada em um terminal possui três elementos básicos:</p>
-<p><code>Comando</code>: nome do programa a ser executado</p>
-<p><code>Opções</code>: geralmente iniciam com um ou dois traços (<em>dashes</em>) pra diferenciar dos argumentos</p>
-<p><code>Argumentos</code>: objeto no qual o comando vai realizar operações e retornar um resultado</p>
-<section id="rtfm" class="level2">
-<h2 class="anchored" data-anchor-id="rtfm">Read the Freaking Manual!</h2>
-<p>Uma das características mais impressionantes da comunidade de desenvolvimento <em>open source</em> talvez seja a enorme preocupação com a <strong>documentação</strong>. Um hábito que precisa ser exercitado é recorrer a documentação de pacotes, funções e programas, evitando assim desgaste desnecessário e se familiarizando com boas práticas de programação.</p>
+<section id="copiando-movendo-renomeando-e-excluindo" class="level2">
+<h2 class="anchored" data-anchor-id="copiando-movendo-renomeando-e-excluindo">Copiando, Movendo, Renomeando e Excluindo</h2>
+<p>Muitos dos comandos que vimos anteriormente para realizar operações com diretórios também são utilizados no gerenciamento dos arquivos.</p>
+<section id="copiando" class="level3">
+<h3 class="anchored" data-anchor-id="copiando">Copiando</h3>
+<p><code>cp</code> [opções] <em>arquivo_fonte</em> <em>arquivo_destino</em>: copia arquivos</p>
+<p><code>cp</code> [opções] <em>arquivo_fonte</em> <em>diretório_destino</em>: copia arquivos para um diretório específico</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href="#cb1-1"></a>cp dir_1/file1.txt dir_1/file2.txt</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/meme-doc.jpg" height="300" class="figure-img"></p>
+<p><img src="images/dup_files.png" class="img-fluid figure-img" width="700"></p>
 </figure>
 </div>
-<p>O Linux possui uma vasta documentação das suas funções, as famosas <em>man pages</em> de <em>manual pages</em>. Basta digitar no terminal <code>man</code> seguido do nome da função para a qual deseja a documentação.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>man head</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {default} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>cp dir_1/*.txt folder_b/</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/term_head.png" class="img-fluid figure-img" width="600"></p>
-<p></p><figcaption class="figure-caption"><em>Man Page</em> da função <code>head</code></figcaption><p></p>
+<p><img src="images/copy_files.png" class="img-fluid figure-img" width="700"></p>
 </figure>
 </div>
-</section>
-<section id="utils" class="level2">
-<h2 class="anchored" data-anchor-id="utils">Algumas funções úteis</h2>
-<p><code>head</code> exibe o início de um arquivo, as 10 primeiras linhas por padrão.</p>
-<p><code>tail</code> exibe o final de um arquivo, as 10 últimas linhas por padrão.</p>
-<p>É possível utilizar o resultado de um comando como entrada para um outro, isso é feito através do operador <em>pipe</em> <code>|</code>. Quem já tem familiaridade com o <code>tidyverse</code> do R conhece a filosofia, o resultado de um comando/função é conectado a outra função.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># exibindo o final da man page da função head</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>man head <span class="sc">|</span> tail</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/term_head_pipe.png" class="img-fluid figure-img" width="600"></p>
-<p></p><figcaption class="figure-caption">Final da <em>Man Page</em> da função <code>head</code></figcaption><p></p>
-</figure>
-</div>
-</section>
-<section id="sudo" class="level2">
-<h2 class="anchored" data-anchor-id="sudo"><strong>sudo</strong></h2>
-<p>Alguns comandos necessitam ser executados ao nível de superusuário do sistema (<em>root</em>). O comando <code>sudo</code> quando utilizado antes de algum comando/função informa ao sistema que esta deve ser executada com privilégios de administrador. Nesse momento a senha de usuário é requisitada, basta informar a senha e pressionar <code>Enter</code> e o comando é executado.</p>
-<p>Por padrão, uma sessão <code>sudo</code> dura 15 minutos. Isso significa que após ter executado um comando como <code>sudo</code> informando sua senha, qualquer outro comando executado com <code>sudo</code>dentro dos próximos 15 minutos não irá requisitar que o usuário informe a senha novamente.</p>
-<p>Uma outra maneira de executar comandos como admin é utilizar o comando <code>sudo su</code>. O comando <code>su</code> (<em>substitute user</em>) é utilizado para alternar entre usuários de um sistema. Utilizado em conjunto com <code>sudo</code> o usuário é trocado para o <code>root</code>, o superusuário do sistema e continuará assim até ser alterado novamente, seja utilizando <code>su</code> ou simplesmente digitando <code>exit</code> no terminal, retornando assim ao usuário padrão do sistema.</p>
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Cuidado!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>É preciso cautela na hora de alterar o usuário que executará um comando. Embora seja comum utilizarmos o <code>sudo</code> para executar tarefas rotineiras, utilizar o terminal no modo superusuário com <code>sudo su</code> pode causar danos ao sistema de arquivos ao rodar comandos indesejados.</p>
-</div>
-</div>
+<p>No primeiro caso estamos fazendo uma cópia do arquivo <code>file1.txt</code> chamado <code>file2.txt</code>. No segundo exemplo os arquivos <code>.txt</code> dentro de <code>dir_1</code> estão sendo copiados para a pasta <code>folder_b</code>. Observe que somente o conteúdo do diretório está sendo copiado, para que o diretório <code>dir_1</code> também seja incluido na cópia é necessário o uso da opção <code>-r</code>. Arquivos podem ser copiados para qualquer local no sistema desde que o caminho correto seja especificado no diretório destino, respeitando obviamente as permissões de acesso para cada usuário como vimos anteriormente.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -500,14 +461,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../lfs/index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Linux File System</span>
+      <a href="../lfs/folders.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><i class="fa-regular fa-folder-open"></i> Diretórios</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../lfs/folders.html" class="pagination-link">
-        <span class="nav-page-text"><i class="fa-regular fa-folder-open"></i> Diretórios</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
