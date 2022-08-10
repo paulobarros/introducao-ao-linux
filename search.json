@@ -119,6 +119,13 @@
     "text": "Linux é um sistema operacional de código aberto (open source), inicialmente desenvolvido para arquitetura Intel x86, e expandido para as mais diversas arquiteturas, estando presente hoje desde computadores pessoais, a sistemas embarcados e supercomputadores."
   },
   {
+    "objectID": "linux.html#gnu-system",
+    "href": "linux.html#gnu-system",
+    "title": "GNU/Linux",
+    "section": "GNU System",
+    "text": "GNU System\nO sistema operacional GNU é um sistema composto completamente por software livre, e com compatibilidade com Unix. GNU significa “GNU’s Not Unix” e foi anunciado inicialmente como um projeto em 1983 por Richard Stallman. Em 1985 é publicado o Manifesto GNU, hoje traduzido para diversas outras línguas. O Projeto GNU está na vanguarda do movimento free software, e a ideia por trás do movimento tem relação com a sua liberdade e não com o preço do software.\n\nLibertade para utilizar o programa como bem entender\nLiberdade para reproduzir o programa e distribuir\nLiberdade para fazer modificações tendo acesso ao código-fonte\nLiberdade para distribuir sua versão modificada"
+  },
+  {
     "objectID": "linux.html#historico",
     "href": "linux.html#historico",
     "title": "GNU/Linux",
